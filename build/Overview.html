@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; Chatb Ensam  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Documentation du Chatbot ENSAM" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Chatb Ensam
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des Matières</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fonctionnalites-principales">Fonctionnalités principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-technique">Architecture technique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#processus-de-fonctionnement">Processus de fonctionnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#public-cible">Public cible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-et-execution">Installation et exécution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Chatb Ensam</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Cette application interactive est conçue pour fournir des réponses pertinentes aux questions liées à l’ENSAM (École Nationale Supérieure d’Arts et Métiers). Le projet repose sur l’utilisation de modèles de langage avancés et une base de vecteurs pour une recherche efficace dans les données textuelles.</p>
+<p>Le chatbot utilise Streamlit pour l’interface utilisateur et intègre des modèles de langage comme <strong>Mistral</strong> via l’API Ollama. Le système est capable de répondre en français et d’identifier clairement si une information n’est pas disponible dans la base de données.</p>
+<p>—</p>
+</section>
+<section id="fonctionnalites-principales">
+<h2>Fonctionnalités principales<a class="headerlink" href="#fonctionnalites-principales" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Réponses personnalisées</strong> : Le chatbot utilise des modèles de langage pour répondre aux questions spécifiques à l’ENSAM.</p></li>
+<li><p><strong>Base de vecteurs</strong> : Gestion des données à l’aide de Chroma pour une recherche rapide et efficace.</p></li>
+<li><p><strong>Interface intuitive</strong> : Application utilisateur construite avec Streamlit pour une expérience interactive.</p></li>
+<li><p><strong>Support multilingue</strong> : Bien que le chatbot réponde en français, l’architecture pourrait être adaptée à d’autres langues.</p></li>
+<li><p><strong>Gestion des réponses inconnues</strong> : Si une réponse ne peut être trouvée dans les données disponibles, l’utilisateur est informé clairement.</p></li>
+</ol>
+<p>—</p>
+</section>
+<section id="architecture-technique">
+<h2>Architecture technique<a class="headerlink" href="#architecture-technique" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Langchain</strong> :
+- Gestion des chaînes (RetrievalQA) pour relier le modèle LLM aux données vectorisées.
+- Utilisation des fonctionnalités d’intégration de texte pour diviser et traiter les données textuelles.</p></li>
+<li><p><strong>Modèle LLM</strong> :
+- <strong>Mistral</strong>, utilisé via l’API Ollama, pour une compréhension et une génération avancées de texte.</p></li>
+<li><p><strong>Chroma</strong> :
+- Base de données vectorielle utilisée pour stocker et récupérer les textes pertinents en fonction des embeddings générés.</p></li>
+<li><p><strong>Streamlit</strong> :
+- Fournit une interface utilisateur simple et intuitive pour poser des questions et afficher les résultats.</p></li>
+</ol>
+<p>—</p>
+</section>
+<section id="processus-de-fonctionnement">
+<h2>Processus de fonctionnement<a class="headerlink" href="#processus-de-fonctionnement" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chargement des données</strong> :
+- Les données textuelles sont lues à partir d’un fichier (ex. : <cite>ProcessedData.txt</cite>).
+- Le texte est découpé en morceaux via un algorithme de text-splitting (RecursiveCharacterTextSplitter).</p></li>
+<li><p><strong>Création de la base de vecteurs</strong> :
+- Si une base de vecteurs existe dans le dossier spécifié, elle est chargée.
+- Sinon, une nouvelle base de vecteurs est créée et persistée à l’aide de <strong>Chroma</strong>.</p></li>
+<li><p><strong>Question/Réponse</strong> :
+- Les questions sont saisies via l’interface utilisateur Streamlit.
+- Une chaîne RetrievalQA relie le modèle LLM à la base de vecteurs pour générer une réponse pertinente.
+- Les réponses incluent, si nécessaire, des informations sur les documents sources.</p></li>
+<li><p><strong>Gestion des réponses inconnues</strong> :
+- Si une question ne peut être répondue à partir des données, le chatbot informe clairement l’utilisateur.</p></li>
+</ol>
+<p>—</p>
+</section>
+<section id="public-cible">
+<h2>Public cible<a class="headerlink" href="#public-cible" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Étudiants et enseignants de l’ENSAM.</p></li>
+<li><p>Personnel administratif.</p></li>
+<li><p>Candidats et visiteurs externes intéressés par l’ENSAM.</p></li>
+</ul>
+<p>—</p>
+</section>
+<section id="installation-et-execution">
+<h2>Installation et exécution<a class="headerlink" href="#installation-et-execution" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Prérequis</strong> :
+- Python 3.8 ou supérieur.
+- Bibliothèques nécessaires : Langchain, Streamlit, dotenv, Chroma.</p></li>
+<li><p><strong>Étapes d’installation</strong> :
+- Clonez le dépôt du projet.
+- Installez les dépendances :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span>
+<span class="pre">`</span></code></p>
+</div></blockquote>
+</li>
+<li><p><strong>Exécution de l’application</strong> :
+- Démarrez l’API Ollama en local.
+- Lancez l’application Streamlit :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">streamlit</span> <span class="pre">run</span> <span class="pre">app.py</span>
+<span class="pre">`</span></code></p>
+</div></blockquote>
+</li>
+</ol>
+<p>—</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Ce projet constitue une solution innovante pour améliorer l’accès aux informations spécifiques à l’ENSAM. En combinant des technologies de pointe comme les modèles de langage, les embeddings vectoriels et une interface interactive, il offre une expérience utilisateur fluide et efficace.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentation du Chatbot ENSAM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Elhassani Mohamed et Romaissae Belhaj.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

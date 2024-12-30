@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Chatb Ensam'
-copyright = '2024, Elhassani Mohamed'
-author = 'Elhassani Mohamed'
+copyright = '2024, Elhassani Mohamed et Romaissae Belhaj'
+author = 'Elhassani Mohamed et Romaissae Belhaj'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

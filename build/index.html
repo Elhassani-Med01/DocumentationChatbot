@@ -1,123 +1,158 @@
+
+
 <!DOCTYPE html>
-<html lang="fr">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet IA Chatbot Pour l'ENSAM</title>
-    <style>
-        body {
-            font-family: 'Verdana', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background: #eee;
-            padding: 10px;
-            border: 1px solid #ccc;
-            overflow-x: auto;
-        }
-        code {
-            color: #0056b3;
-            background-color: #f1f8ff;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation du Chatbot ENSAM &mdash; Chatb Ensam  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="Overview.html" /> 
 </head>
-<body>
-    <h1>Projet IA Chatbot Pour l'ENSAM</h1>
 
-    <h2>Co-fondateurs</h2>
-    <p>Elhassani Mohamed et Romaissae Belhadj</p>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-    <h2>Introduction</h2>
-    <p>Ce projet utilise <code>Streamlit</code> et <code>LangChain</code> pour créer un chatbot interactif spécialisé dans les questions relatives à l'ENSAM. Ce document décrit chaque partie du code, en expliquant son rôle dans l'application.</p>
+          
+          
+          <a href="#" class="icon icon-home">
+            Chatb Ensam
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des Matières</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code Documentation</a></li>
+</ul>
 
-    <h2>Code détaillé et explications</h2>
+        </div>
+      </div>
+    </nav>
 
-    <h3>1. Chargement des bibliothèques</h3>
-    <pre><code>import os
-import streamlit as st
-from langchain_community.llms import Ollama
-from dotenv import load_dotenv
-from langchain_community.embeddings import OllamaEmbeddings
-from langchain.document_loaders import TextLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
-from langchain.chains import RetrievalQA</code></pre>
-    <p>Ces bibliothèques sont utilisées pour :</p>
-    <ul>
-        <li><code>os</code>: Gérer le système de fichiers.</li>
-        <li><code>streamlit</code>: Créer une interface utilisateur interactive.</li>
-        <li><code>LangChain</code>: Gérer les modèles, les embeddings et la recherche de documents.</li>
-        <li><code>dotenv</code>: Charger les variables d'environnement.</li>
-    </ul>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Chatb Ensam</a>
+      </nav>
 
-    <h3>2. Chargement des variables d'environnement</h3>
-    <pre><code>load_dotenv()</code></pre>
-    <p>Permet de charger les variables sensibles comme les clés API à partir d'un fichier <code>.env</code>.</p>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation du Chatbot ENSAM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-du-chatbot-ensam">
+<h1>Documentation du Chatbot ENSAM<a class="headerlink" href="#documentation-du-chatbot-ensam" title="Link to this heading"></a></h1>
+<p>Bienvenue dans la documentation de l’application interactive basée sur un chatbot AI pour l’ENSAM.</p>
+<p>Ce projet a été réalisé par <strong>Elhassani Mohamed</strong> et <strong>Romaissae Belhaj</strong>.</p>
+<p>—</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Table des Matières</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#fonctionnalites-principales">Fonctionnalités principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#architecture-technique">Architecture technique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#processus-de-fonctionnement">Processus de fonctionnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#public-cible">Public cible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#installation-et-execution">Installation et exécution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#etapes-d-installation">Étapes d’installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#problemes-courants">Problèmes courants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#chargement-des-variables-d-environnement">Chargement des variables d’environnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#initialisation-des-modeles-llm-et-embeddings">Initialisation des modèles LLM et embeddings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#lecture-et-traitement-des-donnees-textuelles">Lecture et traitement des données textuelles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#gestion-de-la-base-de-vecteurs">Gestion de la base de vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#creation-de-la-chaine-de-questions-reponses">Création de la chaîne de questions/réponses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#interface-utilisateur-avec-streamlit">Interface utilisateur avec Streamlit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>—</p>
+<section id="presentation">
+<h2>Présentation<a class="headerlink" href="#presentation" title="Link to this heading"></a></h2>
+<p>Le projet a pour objectif de développer un chatbot intelligent pour répondre aux questions spécifiques à l’École Nationale Supérieure d’Arts et Métiers (ENSAM).</p>
+<p>Il repose sur des technologies avancées d’intelligence artificielle et une base de vecteurs pour fournir des réponses rapides et précises via une interface interactive.</p>
+<p>—</p>
+</section>
+<section id="sections-de-la-documentation">
+<h2>Sections de la documentation<a class="headerlink" href="#sections-de-la-documentation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Overview</strong> : Présentation des fonctionnalités et de l’architecture du projet.</p></li>
+<li><p><strong>Code</strong> : Explication détaillée du code source utilisé.</p></li>
+</ol>
+</section>
+</section>
 
-    <h3>3. Initialisation des modèles LLM et d'embedding</h3>
-    <pre><code>llm = Ollama(model="mistral", base_url="http://127.0.0.1:11434")
-embed_model = OllamaEmbeddings(model="mistral", base_url="http://127.0.0.1:11434")</code></pre>
-    <p>Le modèle <code>mistral</code> est utilisé pour générer des réponses et créer des embeddings pour le texte.</p>
 
-    <h3>4. Chargement du fichier texte</h3>
-    <pre><code>file_path = 'C:/Users/nelba/Desktop/Chatbot/Chatbot/New.txt'
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
-with open(file_path, 'r', encoding='utf-8') as file:
-    file_content = file.read()</code></pre>
-    <p>Lit le contenu du fichier texte contenant les données de référence pour répondre aux questions.</p>
+  <hr/>
 
-    <h3>5. Division du texte en morceaux</h3>
-    <pre><code>text_splitter = RecursiveCharacterTextSplitter(chunk_size=1350, chunk_overlap=110)
-chunks = text_splitter.split_text(file_content)</code></pre>
-    <p>Découpe le texte en morceaux pour faciliter le traitement et la recherche.</p>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Elhassani Mohamed et Romaissae Belhaj.</p>
+  </div>
 
-    <h3>6. Gestion de la base de vecteurs</h3>
-    <pre><code>vector_store_path='C:/Users/nelba/Desktop/Chatbot/Chatbot/VDB'
-if not os.path.exists(vector_store_path):
-    os.makedirs(vector_store_path)</code></pre>
-    <p>Crée un dossier pour stocker la base de vecteurs si elle n'existe pas déjà.</p>
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
-    <h3>7. Chargement ou création de la base de vecteurs</h3>
-    <pre><code>if os.listdir(vector_store_path):
-    vector_store = Chroma(persist_directory=vector_store_path, embedding_function=embed_model)
-else:
-    vector_store = Chroma.from_texts(chunks, embed_model, persist_directory=vector_store_path)
-    vector_store.persist()</code></pre>
-    <p>Charge une base existante ou en crée une nouvelle à partir des morceaux de texte.</p>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-    <h3>8. Initialisation du retrieveur et de la chaîne QA</h3>
-    <pre><code>retriever = vector_store.as_retriever()
-qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
-    chain_type="stuff",
-    retriever=retriever,
-    return_source_documents=True
-)</code></pre>
-    <p>Crée un retrieveur pour interroger la base de vecteurs et une chaîne pour générer des réponses.</p>
-
-    <h3>9. Interface utilisateur Streamlit</h3>
-    <pre><code>st.title("Application Interactive - Questions sur ENSAM")
-user_question = st.text_input("Votre question :", placeholder="Posez une question ici...")
-if st.button("Obtenir la réponse"):
-    ...</code></pre>
-    <p>Permet à l'utilisateur de poser une question et de recevoir une réponse via l'interface.</p>
-
-    <h3>10. Gestion des réponses</h3>
-    <pre><code>if user_question.strip():
-    prompt = f"""Tu es un assistant virtuel ...
-    response = qa_chain({"query": prompt.strip()})
-    result = response.get("result", "").strip()
-    ...</code></pre>
-    <p>Construit un prompt, exécute la chaîne QA et affiche la réponse ainsi que les sources, si disponibles.</p>
-
-    <h2>Conclusion</h2>
-    <p>Ce projet intègre plusieurs technologies pour créer un chatbot performant. Chaque composant du code joue un rôle clé pour garantir que les questions des utilisateurs reçoivent des réponses précises et basées sur les données fournies.</p>
 </body>
 </html>
